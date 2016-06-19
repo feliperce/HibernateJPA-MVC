@@ -16,7 +16,7 @@ public class Client {
 	@Column(nullable=true)
 	private int age;
 	@Column(nullable=true)
-	private int cpf; //brazilian ID
+	private int rg; //brazilian ID
 	private String country;
 	private String address;
 	
@@ -38,11 +38,11 @@ public class Client {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public int getCpf() {
-		return cpf;
+	public int getRg() {
+		return rg;
 	}
-	public void setCpf(int cpf) {
-		this.cpf = cpf;
+	public void setRg(int rg) {
+		this.rg = rg;
 	}
 	public String getCountry() {
 		return country;

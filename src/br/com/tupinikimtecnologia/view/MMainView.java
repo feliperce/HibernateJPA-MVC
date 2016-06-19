@@ -21,11 +21,10 @@ public class MMainView implements MenuBase {
 		System.out.println("********************************************\n");
 		
 		System.out.println("1- Insert new client");
-		System.out.println("2- Insert new client phone");
-		System.out.println("3- Edit client");
-		System.out.println("4- Show all Client");
-		System.out.println("5- Client search");
-		System.out.println("6- Remove client");
+		System.out.println("2- Edit client");
+		System.out.println("3- Show all Client");
+		System.out.println("4- Client search");
+		System.out.println("5- Remove client");
 		System.out.println("0- Exit");
 		try{
 			op = scanner.nextInt();

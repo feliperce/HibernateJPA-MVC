@@ -7,6 +7,10 @@ public class ClientController {
 	
 	private ClientDao clientDao;
 	
+	public ClientController(){
+		clientDao = new ClientDao();
+	}
+	
 	public void insertClient(Client client){
 		clientDao.insertClient(client);
 	}
@@ -17,7 +21,23 @@ public class ClientController {
 	 * @return false if length>100, true if length<100
 	 */
 	public boolean checkClientName(String name){
-		if(name.length()>100){
+		if(name.length()>100 || name.equals("")){
+			return false;
+		}
+		return true;
+	}
+	
+	
+	public boolean checkClientCountry(String country){
+		if(country.equals("")){
+			return false;
+		}
+		return true;
+	}
+	
+	
+	public boolean checkClientAddress(String address){
+		if(address.equals("")){
 			return false;
 		}
 		return true;
