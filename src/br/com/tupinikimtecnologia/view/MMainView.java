@@ -1,6 +1,9 @@
 package br.com.tupinikimtecnologia.view;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import br.com.tupinikimtecnologia.utils.ThUtils;
 
 public class MMainView implements MenuBase {
 	
@@ -24,8 +27,14 @@ public class MMainView implements MenuBase {
 		System.out.println("5- Client search");
 		System.out.println("6- Remove client");
 		System.out.println("0- Exit");
-		
-		return scanner.nextInt();
+		try{
+			op = scanner.nextInt();
+		}catch(InputMismatchException e){
+			System.out.println("*** ERROR: Please, enter only number format! ***");
+			op = -1;
+			ThUtils.systemSleep();
+		}
+		return op;
 	}
 
 }
