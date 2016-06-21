@@ -87,7 +87,7 @@ public class MInsertClientView implements MenuBase {
 					System.out.println("*** ERROR: Please, enter the address ***");
 					canContinue = false;
 				}else{
-					client.setCountry(address);
+					client.setAddress(address);
 					canContinue = true;
 				}
 			}while(!canContinue);
@@ -95,7 +95,7 @@ public class MInsertClientView implements MenuBase {
 		}while(!canContinue);
 		System.out.println("SUCESS!! Client registered");
 		clientController.insertClient(client);
-		ThUtils.systemSleep();
+		ThUtils.systemSleep(2000);
 		return 0;
 	}
 

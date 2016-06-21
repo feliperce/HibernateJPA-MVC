@@ -27,7 +27,11 @@ public class MainView {
 					//Edit
 					break;
 				case 3:
-					//show all
+					MGetAllClientView mGetAllClientView = new MGetAllClientView();
+					int qtRecords = mGetAllClientView.printMenu();
+					System.out.println("Total records: "+qtRecords);
+					ThUtils.systemSleep(5000);
+					op = menuMain.printMenu();
 					break;
 				case 4:
 					//search
@@ -40,7 +44,7 @@ public class MainView {
 					break;
 				default:
 					System.out.println("*** ERROR: Choose the correct option [0-5] ***");
-					ThUtils.systemSleep();
+					ThUtils.systemSleep(2000);
 					op = menuMain.printMenu();
 				
 			}

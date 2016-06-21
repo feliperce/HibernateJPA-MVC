@@ -2,10 +2,10 @@ package br.com.tupinikimtecnologia.utils;
 
 public abstract class ThUtils {
 	/**
-	 * Sleep the thread in 2 seconds
+	 * Sleep the thread in miliseconds
+	 * @param ms miliseconds that thread will sleep
 	 */
-	public static void  systemSleep(){
-		int ms = 2000;
+	public static void  systemSleep(int ms){
 		try {
 			System.out.println("Wait "+ms/1000+" seconds...");
 			Thread.sleep(ms);

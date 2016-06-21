@@ -1,5 +1,7 @@
 package br.com.tupinikimtecnologia.controller;
 
+import java.util.List;
+
 import br.com.tupinikimtecnologia.model.dao.ClientDao;
 import br.com.tupinikimtecnologia.model.entity.Client;
 
@@ -13,6 +15,10 @@ public class ClientController {
 	
 	public void insertClient(Client client){
 		clientDao.insertClient(client);
+	}
+	
+	public List<Client> getClientAll(){
+		return clientDao.getClientAll();
 	}
 	
 	/**

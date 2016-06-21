@@ -31,7 +31,7 @@ public class MMainView implements MenuBase {
 		}catch(InputMismatchException e){
 			System.out.println("*** ERROR: Please, enter only number format! ***");
 			op = -1;
-			ThUtils.systemSleep();
+			ThUtils.systemSleep(2000);
 		}
 		return op;
 	}
