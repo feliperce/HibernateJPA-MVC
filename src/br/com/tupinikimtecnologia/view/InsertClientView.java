@@ -69,6 +69,7 @@ public class InsertClientView implements ViewBase {
 			//Insert Country
 			do{
 				System.out.println("Enter the client country");
+				scanner.nextLine();
 				String country = scanner.nextLine();
 				if(!clientController.checkClientCountry(country)){
 					System.out.println("*** ERROR: Please, enter the country ***");
