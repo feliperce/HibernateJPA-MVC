@@ -7,12 +7,12 @@ import br.com.tupinikimtecnologia.controller.ClientController;
 import br.com.tupinikimtecnologia.model.entity.Client;
 import br.com.tupinikimtecnologia.utils.ThUtils;
 
-public class MInsertClientView implements MenuBase {
+public class InsertClientView implements ViewBase {
 	
 	private Scanner scanner;
 	private ClientController clientController;
 	
-	public MInsertClientView(){
+	public InsertClientView(){
 		scanner = new Scanner(System.in);
 		clientController = new ClientController();
 	}
@@ -95,7 +95,6 @@ public class MInsertClientView implements MenuBase {
 		}while(!canContinue);
 		System.out.println("SUCESS!! Client registered");
 		clientController.insertClient(client);
-		ThUtils.systemSleep(2000);
 		return 0;
 	}
 

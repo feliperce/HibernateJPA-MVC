@@ -1,5 +1,5 @@
 package br.com.tupinikimtecnologia.view;
 
-public interface MenuBase {
+public interface ViewBase {
 	public int printMenu();
 }

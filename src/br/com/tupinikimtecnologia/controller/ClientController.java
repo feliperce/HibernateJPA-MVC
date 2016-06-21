@@ -17,6 +17,14 @@ public class ClientController {
 		clientDao.insertClient(client);
 	}
 	
+	public boolean removeClient(int id){
+		return clientDao.removeClient(id);
+	}
+	
+	public List<Client> getClientByName(String name){
+		return clientDao.getClientByName(name);
+	}
+	
 	public List<Client> getClientAll(){
 		return clientDao.getClientAll();
 	}

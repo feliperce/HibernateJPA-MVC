@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 import br.com.tupinikimtecnologia.utils.ThUtils;
 
-public class MMainView implements MenuBase {
+public class MenuView implements ViewBase {
 	
 	private Scanner scanner;
 	
-	public MMainView(){
+	public MenuView(){
 		scanner = new Scanner(System.in);
 	}
 	

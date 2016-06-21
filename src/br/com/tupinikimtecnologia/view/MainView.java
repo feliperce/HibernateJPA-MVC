@@ -10,55 +10,60 @@ public class MainView {
 
 		int op = -1;
 		boolean canContinue = false;
-		MMainView menuMain = new MMainView();
+		MenuView menuMain = new MenuView();
 		
 		while(!canContinue){
 			switch(op){
 				case -1:
-					
 					op = menuMain.printMenu();
 					break;
 				case 1:
-					MInsertClientView mInsertClientView = new MInsertClientView();
-					mInsertClientView.printMenu();
-					op = menuMain.printMenu();
+					//Insert Client
+					InsertClientView insertClientView = new InsertClientView();
+					insertClientView.printMenu();
+					ThUtils.systemSleep(2000);
+					op = -1;
 					break;
 				case 2:
-					//Edit
+					//Edit Client
+					op = -1;
 					break;
 				case 3:
-					MGetAllClientView mGetAllClientView = new MGetAllClientView();
-					int qtRecords = mGetAllClientView.printMenu();
-					System.out.println("Total records: "+qtRecords);
-					ThUtils.systemSleep(5000);
-					op = menuMain.printMenu();
+					//Show all Clients
+					GetClientAllView getAllClientView = new GetClientAllView();
+					int qtClientsAll = getAllClientView.printMenu();
+					System.out.println("Total records: "+qtClientsAll);
+					ThUtils.systemSleep(7000);
+					op = -1;
 					break;
 				case 4:
-					//search
+					//Search Client
+					GetClientView getClientView = new GetClientView();
+					int qtClientsSearch = getClientView.printMenu();
+					System.out.println("Total records: "+qtClientsSearch);
+					ThUtils.systemSleep(7000);
+					op = -1;
 					break;
 				case 5:
-					//remove
+					//Remove Client
+					RemoveClientView removeClientView = new RemoveClientView();
+					removeClientView.printMenu();
+					ThUtils.systemSleep(3000);
+					op = -1;
 					break;
 				case 0:
-					canContinue = false;
+					//Exit system
+					System.exit(0);
 					break;
 				default:
 					System.out.println("*** ERROR: Choose the correct option [0-5] ***");
 					ThUtils.systemSleep(2000);
-					op = menuMain.printMenu();
+					op = -1;
 				
 			}
 
 		}
 		
-		/*Client client = new Client();
-		ClientDao clientDao = new ClientDao();
-		client.setAddress("Adresssss");
-		client.setAge(55);
-		client.setCountry("Brazil");
-		client.setCpf(456465);
-		client.setName("Nomeeeeeee");
-		clientDao.insertClient(client);*/
 		
 	}
 
